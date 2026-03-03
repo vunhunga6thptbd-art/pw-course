@@ -1,0 +1,6 @@
+Giải thích các câu lệnh: git init, git add <file_name>, git add ., git commit -m “message”.
+
+- git init: Khởi tạo repo local
+- git add <file_name>: Thêm từng file cụ thể vào staging area
+- git add .: Thêm tất cả các file trong thư mục
+- git commit -m “message”: Commit file sang repository
