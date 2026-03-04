@@ -8,48 +8,49 @@ f. Chạy lệnh: git commit -m”add file”
 Liệt kê các file theo từng vùng sau khi thao tác một loạt các lệnh:
 
 a. Tạo 3 file: file1, file2, file3
-=> Kết quả:
-    file1: Vùng Local
-    file2: Vùng Local
-    file3: Vùng Local
+    => Kết quả:
+        file1: Vùng Local
+        file2: Vùng Local
+        file3: Vùng Local
 
 b. Chạy lệnh: git init
-=> Kết quả:
-    file1: Vùng Working Directory
-    file2: Vùng Working Directory
-    file3: Vùng Working Directory
+    => Kết quả:
+        file1: Vùng Working Directory
+        file2: Vùng Working Directory
+        file3: Vùng Working Directory
 
 c. Chạy lệnh: git commit -m”init project”
-=> Kết quả:
-    file1: Vùng Working Directory 
-    file2: Vùng Working Directory
-    file3: Vùng Working Directory
-    Do chưa chuyển các file1, file2, file3 vào vùng staging area
-=> Các cách thêm file vào vùng staging area:
-    Cách 1: Thêm từng file cụ thể:
-        git add <file_name>
+    => Kết quả:
+        file1: Vùng Working Directory 
+        file2: Vùng Working Directory
+        file3: Vùng Working Directory
+        Do chưa chuyển các file1, file2, file3 vào vùng staging area
 
-    Cách 2: Thêm nhiều file cụ thể:
-        git add <file_name_1> <file_name_2> <file_name_3> ...
+    => Các cách thêm file vào vùng staging area:
+        Cách 1: Thêm từng file cụ thể:
+            git add <file_name>
 
-    Cách 3: Thêm tất cả các file:
-        git add .
+        Cách 2: Thêm nhiều file cụ thể:
+            git add <file_name_1> <file_name_2> <file_name_3> ...
+
+        Cách 3: Thêm tất cả các file:
+            git add .
 
 d. Chạy lệnh: git add file1
-=> Kết quả:
-    file1: Vùng staging area
-    file2: Vùng working directory
-    file3: Vùng working directory
+    => Kết quả:
+        file1: Vùng staging area
+        file2: Vùng working directory
+        file3: Vùng working directory
 
 
 e. Chạy lệnh: git commit -m”add file1”
-=> Kết quả:
-    file1: Vùng repository
-    file2: Vùng working directory
-    file3: Vùng working directory
+    => Kết quả:
+        file1: Vùng repository
+        file2: Vùng working directory
+        file3: Vùng working directory
 
 f. Chạy lệnh: git commit -m”add file”
-=> Kết quả: Không có file file nên các file không thay đổi vùng
-    file1: Vùng repository
-    file2: Vùng working directory
-    file3: Vùng working directory
+    => Kết quả: Không có file file nên các file không thay đổi vùng
+        file1: Vùng repository
+        file2: Vùng working directory
+        file3: Vùng working directory
