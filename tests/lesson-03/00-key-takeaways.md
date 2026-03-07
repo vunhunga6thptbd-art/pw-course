@@ -84,6 +84,47 @@ hưởng gì
 
         git push -D origin <Tên nhánh>
 
+## 3. Kiến thức bổ sung - ignore file
+- File .gitignore là một file cấu hình quan trọng trong Git, giúp bạn chỉ định những file và thư mục nào sẽ không được theo dõi (untracked) bởi Git.
+
+- __Tại sao cần .gitignore?__
+
+    - Trong dự án thường có nhiều file không cần thiết phải đưa vào Git repository, như:
+    
+        + File tạm thời của hệ điều hành (DS_Store, Thumbs.db)
+        + Thư mục dependencies (node_modules/, vendor/)
+        + File build và artifacts (dist/, build/, *.exe)
+        + File cấu hình cá nhân (IDE settings, environment variables)
+        + File nhạy cảm (API keys, passwords, certificates)
+        + File log và database local
+
+- __Cú pháp file .gitignore:__
+    
+    
+        # Comment - dòng bắt đầu bằng # là ghi chú
+
+        # Ignore file cụ thể
+        secret.txt
+
+        # Ignore tất cả file có extension .log
+        *.log
+
+        # Ignore thư mục
+        node_modules/
+        build/
+
+        # Ignore file trong mọi thư mục con
+        **/*.tmp
+
+        # Ngoại lệ - KHÔNG ignore file này (dùng !)
+        !important.log
+
+        # Ignore file chỉ ở thư mục gốc
+        /TODO
+
+        # Ignore tất cả file .txt trong thư mục doc/
+        doc/**/*.txt
+
 # II. JavaScript
 ## 1. Câu điều kiện
 - Câu điều kiện dùng để kiểm tra một đoạn logic trước khi chạy
@@ -139,4 +180,44 @@ hưởng gì
                 - Điều kiện lặp: nếu đúng thì chạy tiếp, sai thì dừng.
                 - Cập nhật: chạy vào mỗi cuối vòng lặp, để thay đổi giá trị của biến đếm.
 
+## 3. Kiến thức bổ sung
+### 3.1. Convention
+- Convention = quy tắc
+
+- __Convention giúp:__
+    - Code theo format chung, dễ nhìn
+    - Người khác trong team dễ đọc code
+
+- Có __nhiều loại convention:__
+    - Đặt tên file
+    - Đặt tên biến
+    - Đặt tên commit
+    - ...
+
+- __Một số convention phổ biến:__
+
+    - __snake_case:__ trông giống con rắn; tất cả các chữ viết thường, cách nhau bởi dấu gạch dưới
     
+    - __kebab-case:__ trông giống que xiên Hàn Quốc; tất cả các chữ viết thường, cách nhau bởi dấu gạch ngang
+
+    - __camelCase:__ trông giống con lạc đà; chữ đầu viết thường, các chữ sau viết hoa chữ cái đầu tiên
+
+    - __PascalCase:__ tên của nhà toán học Pascal; tất cả các chữ cái đầu viết hoa
+
+### 3.2. Dùng console.log nâng cao
+- Console log là một công cụ quan trọng giúp debug và theo dõi code.
+
+- __Một số cách dùng console log khác nhau:__
+    - __Sử dụng với nháy đơn, nháy kép:__
+    
+            console.log(‘Xin chào’);
+            console.log(“Xin chào”);
+
+    - __Sử dụng kèm với variable:__
+            
+            let name = “Linh”;
+            console.log(`Toi la ${name}`);
+
+    - __Sử dụng cộng chuỗi:__
+
+            console.log(“Toi ten la” + name + “”)
