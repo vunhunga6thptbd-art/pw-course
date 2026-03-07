@@ -6,13 +6,13 @@
         ii. Nếu hằng số nhỏ hơn 0: “Giá trị bạn nhập là số âm”
 */
 
-const number = 2;
+const Number = 6;
 // i. Nếu hằng số lớn hơn 0: “Giá trị bạn nhập là số dương”
-if (number > 0) {
+if (Number > 0) {
     console.log("Giá trị bạn nhập là số dương");
 }
 
 // ii. Nếu hằng số nhỏ hơn 0: “Giá trị bạn nhập là số âm”
-if (number < 0) {
+if (Number < 0) {
     console.log("Giá trị bạn nhập là số âm");
 }
