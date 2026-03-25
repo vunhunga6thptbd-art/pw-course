@@ -20,7 +20,7 @@ test('test3.spec.ts - Thêm todo task', async ({ page }) => {
         page.on('dialog', async dialog => dialog.accept());
         for (let i = 1; i <= 100; i++) {
             if (i % 2 === 1) {
-                const todo = page.locator(`//button[@id='todo-${i}-delete']`);
+                // const todo = page.locator(`//button[@id='todo-${i}-delete']`); // Không cần dùng cái này
                 await page.click(`//button[@id='todo-${i}-delete']`);
             }
         }
